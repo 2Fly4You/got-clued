@@ -1,0 +1,53 @@
+.back-card {
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+}
+
+.close-action {
+    display: inline-block;
+    position: fixed;
+    bottom: 15px;
+    left: 5px;
+    z-index: 150;
+}
+
+.clear-info {
+    display: inline-block;
+    position: fixed;
+    bottom: 40px;
+    right: 70px;
+    z-index: 150;
+}
+
+.info-info {
+    display: inline-block;
+    position: fixed;
+    bottom: 105px;
+    right: 70px;
+    z-index: 150;
+}
+
+.location-info {
+    display: inline-block;
+    position: fixed;
+    top: 65px;
+    left: 220px;
+    z-index: 150;
+}
+
+.checkbox-info {
+    display: inline-block;
+    position: fixed;
+    top: 185px;
+    left: 55px;
+    z-index: 150;
+}
+
+.notes-info {
+    display: inline-block;
+    position: fixed;
+    top: 385px;
+    left: 20px;
+    z-index: 150;
+}

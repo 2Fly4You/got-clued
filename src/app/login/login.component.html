@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+    GOT Cluedo
+  </mat-toolbar>
+
+  <mat-card style="height:100%; width:100%;">
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      Bitte gib deinen Namen ein
+      <mat-input-container>
+        <input
+          matInput
+          name="username"
+          type="text"
+          class="form-control"
+          [(ngModel)]="username"
+          placeholder="Name"
+          required
+        >
+     </mat-input-container>
+
+      <button
+        [disabled]="!f.valid"
+        mat-raised-button
+        color="primary"
+      >
+        Start
+      </button>
+    </form>
+  </mat-card>

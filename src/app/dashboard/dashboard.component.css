@@ -1,0 +1,40 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.reload-action {
+    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 15;
+}
+
+.info-action {
+    display: inline-block;
+    position: fixed;
+    bottom: 100px;
+    right: 33px;
+    z-index: 15;
+}
+
+.hover {
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.sub-toolbar {
+    margin-top: 10px;
+    max-height: 30px;
+}
+
+.subcards {
+    margin: 10px;
+}
+
+.notes {
+    width: 10%;
+}

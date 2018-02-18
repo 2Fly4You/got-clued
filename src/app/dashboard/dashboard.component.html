@@ -1,0 +1,155 @@
+<app-info
+  *ngIf="infoVisible"
+  class="hover"
+  (infoVisible)="onVisibility()"
+>
+</app-info>
+
+<mat-toolbar color="primary">
+  GOT Cluedo
+
+  <span class="example-spacer"></span>
+  <button mat-button (click)="logout()">
+    <mat-icon>reply</mat-icon>Logout
+  </button>
+</mat-toolbar>
+
+<mat-card style="height:100%; width:100%; background-color:gray; padding-left: 0; padding-right: 0;">
+  <div style="padding-bottom: 10px; padding-left: 20px;">
+    Roter Bergfried
+    <mat-slide-toggle
+      [(ngModel)]="location"
+      (change)="onLocationChange()"
+      color="warn"
+    >
+    </mat-slide-toggle>
+    Mereen
+  </div>
+  <mat-card class="subcards">
+    <mat-toolbar color="primary" class="sub-toolbar">
+      Personen
+    </mat-toolbar>
+    <div *ngFor="let peep of people">
+      <mat-checkbox
+        [(ngModel)]="peep.value"
+      >
+        {{peep.name}}
+      </mat-checkbox>
+      <mat-input-container class="notes">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="peep.notes"
+          placeholder="1"
+        >
+      </mat-input-container>
+      <mat-input-container class="notes">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="peep.notes2"
+          placeholder="2"
+        >
+       </mat-input-container>
+       <mat-input-container class="notes">
+         <input
+           matInput
+           type="text"
+           [(ngModel)]="peep.notes3"
+           placeholder="3"
+         >
+        </mat-input-container>
+    </div>
+  </mat-card>
+  <mat-card class="subcards">
+    <mat-toolbar color="primary" class="sub-toolbar">
+      Räume
+    </mat-toolbar>
+    <div *ngFor="let room of rooms">
+      <mat-checkbox
+        [(ngModel)]="room.value"
+      >
+        {{room.name}}
+      </mat-checkbox>
+      <mat-input-container class="notes">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="room.notes"
+          placeholder="1"
+      >
+      </mat-input-container>
+      <mat-input-container class="notes">
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="room.notes2"
+          placeholder="2"
+        >
+       </mat-input-container>
+       <mat-input-container class="notes">
+         <input
+           matInput
+           type="text"
+           [(ngModel)]="room.notes3"
+           placeholder="3"
+         >
+        </mat-input-container>
+    </div>
+  </mat-card>
+  <mat-card class="subcards">
+    <mat-toolbar color="primary" class="sub-toolbar">
+      Waffen
+    </mat-toolbar>
+    <div *ngFor="let weapon of weapons">
+      <mat-checkbox
+        [(ngModel)]="weapon.value"
+      >
+        {{weapon.name}}
+      </mat-checkbox>
+      <mat-input-container class="notes">
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="weapon.notes"
+            placeholder="1"
+          >
+       </mat-input-container>
+       <mat-input-container class="notes">
+         <input
+           matInput
+           type="text"
+           [(ngModel)]="weapon.notes2"
+           placeholder="2"
+         >
+        </mat-input-container>
+        <mat-input-container class="notes">
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="weapon.notes3"
+            placeholder="3"
+          >
+         </mat-input-container>
+    </div>
+  </mat-card>
+</mat-card>
+
+<span class="reload-action">
+  <button
+    mat-fab
+    color="accent"
+    matTooltip="Eingaben zurücksetzen"
+    (click)="openClearAllDialog()"
+  >
+    <mat-icon>
+      autorenew
+    </mat-icon>
+  </button>
+
+  <span class="info-action">
+    <button mat-mini-fab (click)="showInfo()">
+      <mat-icon>lightbulb_outline</mat-icon>
+    </button>
+  </span>
+</span>
